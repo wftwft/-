@@ -1,0 +1,24 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view>
+  <button bindtap='add_sno' wx:if="{{!isBind}}" class="but">绑定账号</button>
+  <!-- <button bindtap='enterChangePassword' wx:if="{{isBind}}" class="remove_sno_css">修改密码</button> -->
+  <button bindtap='del_sno' wx:if="{{isBind}}" class="but">解绑账号</button>
+  <button bindtap='to_instruction' class="but">关于</button>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
+<modal hidden="{{hiddenmodalput}}" title="修改密码" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input bindinput="getPrePassword" value="{{prePassword}}" type='text'placeholder="请输入原密码" auto-focus/>
+    <input bindinput="getNewPassword" value="{{newPassword}}" type='text'placeholder="请输入新密码" auto-focus/>
+    <input bindinput="getRePassword" value="{{rePassword}}" type='text'placeholder="请再次输入新密码" auto-focus/>
+</modal>

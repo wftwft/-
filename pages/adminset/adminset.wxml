@@ -1,0 +1,3 @@
+<!--pages/adminset/adminset.wxml-->
+ <button bindtap='to_admin' class="but">绑定班级号与课表</button>
+  <button bindtap="to_instruction" class="but">管理员手册</button>

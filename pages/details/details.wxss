@@ -1,0 +1,70 @@
+/* pages/details/details.wxss */
+.title{
+  border: solid 3rpx rgb(187, 113, 236);
+  border-radius: 40rpx 40rpx 0rpx 0rpx;
+  background-color: rgb(187, 113, 236);
+  color: white;
+  margin-left:14rpx;
+  margin-top: 20rpx;
+  width: 720rpx;
+  height: 120rpx
+
+}
+.body{
+  border: solid 3rpx rgb(187, 113, 236);
+  border-radius: 0rpx 0rpx 40rpx 40rpx ;
+    margin-left:14rpx;
+  width: 720rpx;
+  height: 300rpx
+}
+.purple{
+  color: #c082c5
+}
+.detail_name{
+    position: absolute;
+    display: inline-block;
+    font-size: 50rpx;
+    font-family: "黑体";
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+}
+.edit{
+  display: inline-block;
+  position: absolute;
+  width: 140rpx;
+  height: 60rpx;
+  margin-top: 30rpx;
+  margin-left: 550rpx;
+  border: 30rpx;
+  background-color: rgb(255, 255, 255);
+ border-radius: 40rpx 40rpx;
+ font-size: 28rpx;
+ font-display: center;
+ font-family: "黑体";
+ font-weight:500;
+}
+.but{
+  margin-top: 20rpx;
+  width: 700rpx;
+  height: 100rpx;
+  border: 1px solid #c082c5; 
+  border-radius: 10rpx;  
+  background-color: #fbedfd;
+  color: #c082c5
+}
+.detail{
+  margin-top:20rpx; 
+  margin-left: 8rpx;
+}
+.word{
+  margin-top:20rpx; 
+  margin-left: 8rpx;
+  color: black
+  
+}
+.box{
+  margin-top:10rpx; 
+  margin-left: 15rpx;
+  border: solid 2rpx gainsboro;
+  width: 720rpx;
+  }

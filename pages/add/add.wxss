@@ -1,0 +1,21 @@
+/* pages/add/add.wxss */
+.but{
+  margin-top: 20rpx;
+  width: 700rpx;
+  height: 100rpx;
+  border: 1px solid #c082c5; 
+  border-radius: 10rpx;  
+  background-color: #fbedfd;
+  color: #c082c5
+}
+.word{
+  margin-top:20rpx; 
+  margin-left: 8rpx;
+  color: #c082c5
+}
+.box{
+  margin-top:10rpx; 
+  margin-left: 15rpx;
+  border: solid 2rpx gainsboro;
+  width: 720rpx;
+  }

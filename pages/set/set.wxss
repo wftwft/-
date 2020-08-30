@@ -1,0 +1,10 @@
+/* pages/set/set.wxss */
+.but{
+  margin-top: 10rpx;
+  width: 700rpx;
+  height: 100rpx;
+  border: 1px solid #c082c5; 
+  border-radius: 10rpx;  
+  background-color: #fbedfd;
+  color: #c082c5
+}

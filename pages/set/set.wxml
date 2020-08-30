@@ -1,0 +1,27 @@
+<!--pages/set/set.wxml-->
+<block wx:if="{{user.job=='student'}}">
+  <button bindtap="onload" class="but">导入课表数据</button>
+  <button bindtap="updateTable" class="but">一键更新课表</button>
+  <button bindtap='show' class="but">添加课程</button>
+</block>
+<!-- <button bindtap='print' data-msg="传参">查看空闲教室</button> -->
+
+<block wx:if="{{user.job=='teacher'}}">
+  <button bindtap="onloadTeacher" class="but">导入排课表数据</button>
+  <button bindtap="updateTeacherTable" class="but">一键更新排课表</button>
+  <button bindtap='showTeacher' class="but">辅助调课</button>
+</block>
+
+
+
+
+<block wx:if="{{user.job==undefined}}">
+  <navigator open-type="switchTab" url="/pages/about/about" >
+   <button class="but"> 到个人中心绑定账号</button>
+  </navigator>
+  <button bindtap="enterAdmin" class="but">管理员登录</button>
+</block>
+<modal hidden="{{hiddenmodalput}}" title="请输入管理密码" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input bindinput="getAdminPassword" value="{{adminPassword}}" type='text'placeholder="请输入密码" auto-focus/>
+</modal>
+<button bindtap='card' data-msg="传参" class="but">查看校历</button>

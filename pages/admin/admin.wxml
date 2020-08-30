@@ -1,0 +1,14 @@
+<!--pages/admin/admin.wxml-->
+<view class="word">
+  <text >班级名称</text>
+  
+</view>
+<input bindinput="getClassName" value="{{className}}" placeholder="例如：软件开发1班" type="text" class="box"></input>
+<view class="word">
+  <text >班级编号</text>
+  
+</view>
+<input bindinput="getClassNum" value='{{classNum}}' placeholder="例如：1603103" type="text" class="box"></input>
+<view>
+<button bindtap="uploadTable" class="but">导入课表</button>
+</view>

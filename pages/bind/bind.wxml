@@ -1,0 +1,10 @@
+<!--pages/bind/bind.wxml-->
+<view class="word">输入学号或工号</view>
+<input class="box" bindinput="getAccount"></input>
+<view class="word">输入姓名</view>
+<input class="box" bindinput="getUsername"></input>
+<!-- <view>输入密码</view>
+<input class="input" bindinput="getPassword"></input>
+<view>请再次输入密码</view>
+<input class="input" bindinput="getPassword2"></input> -->
+<button bindtap="regist" class="but">提交</button>

@@ -1,0 +1,4 @@
+<view class="top">
+  //item是数组中的值
+  <view wx:for="{{['一','二','三','四','五','六','日']}}" class="top-text">周{{item}}</view>
+</view>

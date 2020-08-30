@@ -1,0 +1,35 @@
+<view>
+  <button bindtap="importFile" class="but">导入班级课表计算空闲时间</button>
+</view>
+<view class="emptyWeek" wx:if="{{emptyWeek}}">
+  
+  <view class="day" wx:for="{{emptyWeek}}" wx:for-item="dayCourse">
+    
+    <view wx:for="{{dayCourse}}" wx:for-index="i" class="grid" style="background:{{item.empty?'#f4d9ff':'#ff8ab7'}}" bindtap="chooseCourse" data-empty="{{item.empty}}" data-day="{{index+1}}" data-index="{{i}}" >
+      {{index+1}}-{{i}}({{item.empty?"闲":"满"}})
+    </view>
+  </view>
+</view>
+<!--pages/add/add.wxml-->
+<view class="word">课程名称</view>
+<input bindinput="addName" class="box"></input>
+<view class="word">上课周数</view>
+<input placeholder="格式如：1-16" bindinput="addWeek" class="box"></input>
+<view class="word">上课时间</view>
+<picker mode="multiSelector" bindchange="bindTimePickerChange" bindcolumnchange="bindTimePickerColumnChange" value="{{timeIndex}}" range="{{timeArray}}" class="box">
+  <view class="picker">
+    {{timeArray[0][timeIndex[0]]}} {{timeArray[1][timeIndex[1]]}}
+  </view>
+  </picker>
+  <!-- <view>授课老师</view>
+  <input placeholder="老师" bindinput="addTeacher"></input> -->
+  <view class="week">
+    <view class="section__title" class="word">上课教室</view>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" class="box">
+      <view class="picker">
+        当前选择：{{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}-{{multiArray[2][multiIndex[2]]}}{{multiArray[3][multiIndex[3]]}}
+      </view>
+    </picker>
+  </view>
+
+  <button bindtap="submit" class="but">确认添加</button>

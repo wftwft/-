@@ -1,0 +1,15 @@
+<!--pages/calendar/calendar.wxml-->
+<!-- 414*919 px-->
+<view class="word">南理工大学紫金学院校历（倒序）</view>
+<view>
+<image src='../../image/schoolcalendar/2020-2.jpg' style=" width:750rpx ;height:1200rpx;margin-top:20rpx"></image>
+<image src='../../image/schoolcalendar/2019-2.jpg' style=" width:750rpx ;height:1200rpx;margin-top:20rpx"></image>
+<image src='../../image/schoolcalendar/2019-1.jpg' style=" width:750rpx ;height:1200rpx;margin-top:20rpx"></image>
+<view class="text">2018-2019 学年第一学期（春季）校历</view>
+<image src='../../image/schoolcalendar/2018-3.jpg'style=" width:700rpx ;height:450rpx;margin-top:10rpx;margin-left:20rpx"></image>
+<image src='../../image/schoolcalendar/2018-4.jpg' style=" width:700rpx ;height:450rpx;margin-left:20rpx"></image>
+<image src='../../image/schoolcalendar/2018-5.jpg' style=" width:700rpx ;height:450rpx;margin-left:20rpx"></image>
+<image src='../../image/schoolcalendar/2018-6.jpg' style=" width:700rpx ;height:450rpx;margin-left:20rpx"></image>
+<image src='../../image/schoolcalendar/2018-7.jpg' style=" width:700rpx ;height:450rpx;margin-left:20rpx"></image>
+</view>
+

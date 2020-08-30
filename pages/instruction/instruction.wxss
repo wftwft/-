@@ -1,0 +1,13 @@
+/* pages/instruction/instruction.wxss */
+.word{
+  text-align: center; 
+  margin-top: 10rpx;
+  color: #c082c5;
+  font-size: 48rpx;
+  
+}
+.text{
+  margin-top: 10rpx;
+  color: black;
+  font-size: 30rpx;
+}

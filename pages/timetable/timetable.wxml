@@ -1,0 +1,94 @@
+<!--pages/timetable/timetable.wxml-->
+<view class="menu">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{menuArray}}" style="">
+    <view class="picker">
+      {{menuArray[weekNum-1]}}
+    </view>
+  </picker>
+</view>
+<view class="typesetting">
+  <!--显示月份（数据待搞定）-->
+  <view class="month">
+    <view class="month_data">{{month}}</view>
+    <view class="month_fix">月</view>
+  </view>
+
+  <!-- 顶部标题栏  -->
+  <view class="top">
+    <view wx:for="{{['一','二','三','四','五','六','日']}}" class="top-text">周{{item}}</view>
+  </view>
+  <!-- 日期 -->
+  <view class="cir">
+    <view wx:for="{{dayArr}}" class="top-text">{{item}}</view>
+  </view>
+</view>
+<!-- 主体部分 -->
+<!-- <scroll-view scroll-y="true" class="scroll"> -->
+  <view style="height:1000rpx;width:730rpx;display:flex;">
+    <view style="background-color:#f4d9ff;color:#752c93;">
+      <view class="left">
+        <view class="left_num">1</view>
+        <view class="left_text">
+          <text>\n8:20\n~\n10:00</text>
+        </view>
+      </view>
+      <view class="left">
+        <view class="left_num">2</view>
+        <view class="left_text">
+          <text>\n10:15\n~\n11:55</text>
+        </view>
+      </view>
+      <view class="left">
+        <view class="left_num">3</view>
+        <view class="left_text">
+          <text>\n14:10\n~\n15:50</text>
+        </view>
+      </view>
+      <view class="left">
+        <view class="left_num">4</view>
+        <view class="left_text">
+          <text>\n16:05\n~\n17:55</text>
+        </view>
+      </view>
+      <view class="left">
+        <view class="left_num">5</view>
+        <view class="left_text">
+          <text>\n18:25\n~\n21:30</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 分割线 -->
+    <view wx:for="{{[1,2,3,4,5]}}">
+      <view style="width:715rpx;margin-top:{{(index+1)*200}}rpx; margin-left:0rpx; position: absolute;border-bottom:1rpx solid {{index==1||index==3?'purple':'lightgray'}};">
+      </view>
+    </view>
+    <!-- 课表主体部分，共35个view -->
+    <!-- <view wx:for="{{datalist}}"> -->
+    <!-- <block wx:if="{{item.time}}==id"> -->
+      <view class="square">
+        <view 
+        class="body_{{key}}" 
+        id="{{key}}" 
+        wx:for="{{courseObj}}" 
+        wx:for-index="key" 
+        wx:for-item="value"
+        bindtap="toDetail"
+        data-index = "{{key}}"
+        > 
+        <text wx:if="{{value.show}}">{{value.title}}
+                              {{value.classroom}}
+        </text>
+        </view>
+      </view>
+      <!-- </block>
+    </view> -->
+    <!-- <view wx:for="{{wlist}}"> -->
+    <!-- <view class="flex-item body-item" id='0' data-statu="open" data-index="{{index}}" style="margin-left:{{(item.week-1)*100}}rpx;margin-top:{{(item.start)*200+5}}rpx;height:{{item.duration*200-5}}rpx;background-color:{{colorArrays[index%8]}}"> -->
+    <!-- week代表星期几上课，start是上课时间，duration上课长度，msg课程信息-->
+    <!-- <view class="bodytext">{{item.msg}}</view>
+        -->
+    <!-- </view>
+    </view> -->
+  </view>
+<!-- </scroll-view> -->

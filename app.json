@@ -1,0 +1,51 @@
+{
+  "pages": [
+        
+    "pages/timetable/timetable",
+    "pages/add/add",
+    "pages/about/about",
+    "pages/set/set",
+    "pages/teacherAdd/add",
+    "pages/bind/bind",
+    "pages/instruction/instruction",
+    "pages/admin/admin",
+    "pages/details/details",
+    "pages/admin_need/admin_need",
+"pages/calendar/calendar",
+    "pages/adminset/adminset"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#c082c5",
+    "navigationBarTitleText": "紫金课表",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#C4C4C4"
+  },
+  "tabBar": {
+    "selectedColor": "#0f0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/timetable/timetable",
+        "text": "首页",
+        "iconPath": "image/zj_h.jpg",
+        "selectedIconPath": "image/zj_g.jpg"
+      },
+      {
+        "pagePath": "pages/set/set",
+        "text": "设置",
+        "iconPath": "image/wc_h.jpg",
+        "selectedIconPath": "image/wc_g.jpg"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我的",
+        "iconPath": "image/zj_h2.jpg",
+        "selectedIconPath": "image/zj.jpg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap9.json"
+}

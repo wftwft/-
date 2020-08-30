@@ -1,0 +1,29 @@
+<!--pages/details/details.wxml-->
+<view class="title">
+  <view class="detail_name">
+    {{title}}
+  </view>
+</view>
+<view class="body">
+  <view class="detail_classroom">
+    <view class="word"><text class="purple"> 教室:</text>{{classroom}} </view>
+  </view>
+  <view class="detail_week">
+    <view class="word"> <text class="purple">周数:</text>{{weekArr}} </view>
+  </view>
+  <view class="detail_time">
+    <view class="word"> <text class="purple">节数: </text>第 {{weekDay}} 天 第 {{dayIndex}} 节 </view>
+  </view>
+  <block wx:if="{{teacher}}">
+  <view class="detail_teacher">
+    <view class="word"> <text class="purple">老师:</text>{{teacher}} </view>
+  </view>
+   </block>
+</view>
+
+<view class="buttons">
+  
+ <button bindtap="toRenew"class="but">修改</button>
+  <button bindtap="delcourse" class="but">删除</button>
+  
+</view>

@@ -1,0 +1,23 @@
+<!--pages/add/add.wxml-->
+<view class="word">课程名称</view>
+<input bindinput="addName" class="box"></input>
+<view class="word">上课周数</view>
+<input placeholder="格式如：1-1,2-10" bindinput="addWeek" class="box"></input>
+<view class="word">上课时间</view>
+<picker mode="multiSelector" bindchange="bindTimePickerChange" bindcolumnchange="bindTimePickerColumnChange" value="{{timeIndex}}" range="{{timeArray}}" class="box">
+  <view class="picker">
+    {{timeArray[0][timeIndex[0]]}} {{timeArray[1][timeIndex[1]]}}
+  </view>
+</picker>
+<view class="word" class="word">授课老师</view>
+<input placeholder="老师" bindinput="addTeacher" class="box"></input>
+<view class="week">
+  <view class="word" class="word">上课周数</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" class="box">
+    <view class="picker">
+      当前选择：{{multiArray[0][multiIndex[0]]}}{{multiArray[1][multiIndex[1]]}}-{{multiArray[2][multiIndex[2]]}}{{multiArray[3][multiIndex[3]]}}
+    </view>
+  </picker>
+</view>
+
+<button bindtap="submit" class="but">确认添加</button>

@@ -1,0 +1,5 @@
+<!--pages/admin_need/admin_need.wxml-->
+<view class="word">管理员手册</view>
+<view class="text">每逢新学期，管理员都要将教师的新课表通过云开发控制台添加到云存储的“teacher_excel”文件夹下并删除旧文件</view>    
+<view class="text">小程序端可以将班级号与课表绑定，方便学生一键获取课表</view>
+<view class="text">管理员密码“zj_admin不要忘记”</view>
